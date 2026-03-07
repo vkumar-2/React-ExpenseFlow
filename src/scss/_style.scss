@@ -1,0 +1,61 @@
+@use './_utilities' as util;
+@use './_forms' as forms;
+@use './_summary' as summary;
+@use './_transactions' as transactions;
+
+@mixin setResponsiveMargins()
+{
+    @include util.margin(xs);
+    @include util.respond(lg) {@include util.margin(lg);}
+    @include util.respond(xl) {@include util.margin(xl);}
+    @include util.respond(xxl) {@include util.margin(xxl);}
+}
+
+html body div#root
+{
+    section#layout main
+    {
+        section#transactions-section {@include setResponsiveMargins();}
+        section#expense-document
+        {
+            section#form-section {@include forms.loadStyle();}
+            section#summary-section {@include summary.loadStyle();}
+            section#transactions-section 
+            {
+                @include transactions.loadStyle();
+                button.action-btn
+                {
+                    padding: 5px 25px;
+                    font-size: 12px;
+                    margin: 10px;
+                    cursor: pointer;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #5e0000;
+                    &:hover, &:focus {background-color: #3d0000;}
+                    @include util.respond(lg) {margin: 0;}
+                }
+            }
+            div#expense-flexbox
+            {   
+                section#form-section,
+                section#summary-section {@include setResponsiveMargins();}
+
+                @include util.respond(lg)
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 0;
+                    section#summary-section, section#form-section {width: 50%;}
+                }
+                @include util.respond(xxl)
+                {
+                    justify-content: flex-start;
+                    section#summary-section {width: 40%}
+                    section#form-section {width: 60%}
+                }
+            }
+        }
+    }
+}

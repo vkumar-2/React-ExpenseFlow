@@ -1,0 +1,61 @@
+@use './_utilities' as util;
+
+* {@include util.reset();}
+
+html,
+body {height: 100%}
+body 
+{
+    @extend body;
+    font-family: Arial;
+    div#root 
+    {
+        @include util.fullScreen();
+        max-width: none;
+        margin: util.$no-margin;
+        padding: util.$no-padding;
+        text-align: left;
+        section#layout
+        {
+            @include util.fullScreen();
+            display: flex;
+            flex-direction: column;
+            header
+            {
+                @include util.flexTheme();
+                display: flex;
+                justify-content: center;
+                padding: 2px;
+                div#logo-container
+                {
+                    width: 250px;
+                    img {width: 100%;}
+                    @include util.respond(lg) {width: 300px;}
+                }
+            }
+            main 
+            {
+                @include util.gradientAnimation(clouds);
+                width: 100%; 
+                flex: 1; 
+            }
+            footer
+            {
+                @include util.flexTheme();
+                text-align: center;
+                padding: 20px;
+                p 
+                {
+                    padding: 2px;
+                    font-size: 20px;
+                    a
+                    {
+                        text-decoration: none;
+                        color: #ff7b00;
+                        &:hover, &:focus {color: gold;}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@use "sass:math";
+
+// responsive designs
+@mixin respond($viewport)
+{
+    @if $viewport == xs {@media only screen and (max-width: 600px) {@content;}} // XS Viewports (smartphones)
+    @else if $viewport == sm {@media only screen and (min-width: 600px) {@content;}} // S Viewports (portrait tablets)
+    @else if $viewport == md {@media only screen and (min-width: 768px) {@content;}} // M Viewports (landscape tablets)
+    @else if $viewport == lg {@media only screen and (min-width: 992px) {@content;}} // L Viewports (laptops)
+    @else if $viewport == xl {@media only screen and (min-width: 1200px) {@content;}} // XL Viewports (desktops)
+    @else if $viewport == xxl {@media only screen and (min-width: 1500px) {@content;}} // XXL Viewports (desktops+)
+    @else {}
+}
+
+// gradients
+@mixin gradient($theme)
+{
+    @if $theme == midnight {background-image: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);}
+    @else if $theme == mint {background-image: linear-gradient(to bottom, #163f00, #006647);}
+    @else if $theme == fire {background-image: linear-gradient(to bottom, #ff512f, #dd2476);}
+    @else if $theme == forest {background-image: linear-gradient(to bottom, #134e5e, #71b280);}
+    @else if $theme == clouds {background-image: linear-gradient(to bottom, #d8d8d8, #a7a7a7, #d8d8d8);}
+    @else if $theme == sunset {background-image: linear-gradient(to bottom, #752b00, #b47b00);}
+    @else {background-color: white;}
+}
+@mixin gradientEffect($theme)
+{
+    @if $theme == mint {background-image: linear-gradient(to top, #215f00, #00865e);}
+    @else if $theme == sunset {background-image: linear-gradient(to top, #993800, #ca8a00);}
+    @else if $theme == blue {background-image: linear-gradient(to right, #000552, #4a55f5);}
+    @else if $theme == red {background-image: linear-gradient(to right, #460000, #d80000);}
+    @else if $theme == yellow {background-image: linear-gradient(to right, #503400, #ff9900);}
+    @else if $theme == green {background-image: linear-gradient(to right, #032900, #30a030);}
+    @else {background-color: white;}
+}
+@mixin gradientAnimation($theme)
+{
+    @if $theme == clouds {animation: clouds 5s linear infinite;}
+    @else {background-color: white;}
+
+    @keyframes clouds
+    {
+        @for $i from 0 through 255 // dark -> light
+        {
+            #{percentage(math.div($i, 510))} {background-image: linear-gradient(to bottom, #5e5e5e, rgb($i, $i, $i), #5e5e5e);}
+        }
+        @for $i from 0 through 255 // light -> dark
+        {
+            $val: 255 - $i;
+            #{percentage(math.div(255 + $i, 510))}{background-image: linear-gradient(to bottom, #5e5e5e, rgb($val, $val, $val), #5e5e5e);}
+        }
+    }
+}
+@mixin h3() 
+{
+    background-color: $theme-color;
+    color: white;
+    text-align: left; 
+    padding: 10px 20px;
+    font-weight: 500;
+}
+@mixin flexTheme() {background-color: $theme-color; color: white;}
+@mixin fullScreen($height: 100vh) {width: 100%; min-height: $height;}
+@mixin reset()
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin tbRowWidths()
+{
+    &:first-child {width: 10%;}
+    &:nth-child(2) {width: 20%;}
+    &:nth-child(3) {width: 40%;}
+    &:nth-child(4) {width: 20%;}
+    &:last-child {width: 10%}
+}
+@mixin margin($viewport) {margin: map-get($margin-map, $viewport);}
+$margin-map: (xs: 1rem, sm: 1rem, md: 1rem, lg: 1rem 3rem, xl: 1rem 6rem, xxl: 1rem 6rem);
+
+// button colours
+$btn-add-transaction: rgb(159, 255, 159);
+$btn-search-transaction: rgb(255, 236, 173);
+
+// misc variables
+$theme-grey: #2c2c2c;
+$transition-theme: background-color 0.3s ease-out;
+$grid-item-grey: #eeeeee;
+$no-padding: 0;
+$no-margin: 0;
+
+// classes (for JSX)
+.block {display: block;}
+.flex {display: flex;}
+.none {display: none;}
+
+// xray lines
+.xray-1 {border: 1px dashed black;}
+.xray-2 {border: 2px dashed black;}
+.xray-3 {border: 3px dashed black;}
+
+$base-color: #036;
+$theme-color: #26002e;

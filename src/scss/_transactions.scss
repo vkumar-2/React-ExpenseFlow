@@ -1,0 +1,77 @@
+@use './_utilities' as util;
+
+@mixin loadStyle()
+{
+    border: 1px solid black;
+    h3 
+    {
+        @include util.h3();
+        border-bottom: 1px solid black;
+        color: #4bc6ff;
+    }
+    div#transactions-container
+    {
+        background-color: white;
+        padding: 10px 20px;
+        
+        // default container
+        section.tr-map-container
+        {
+            border: 1px solid #b6b6b6;
+            margin: 20px 0;
+
+            div.entries
+            {
+                display: grid;
+                grid-template-columns: 40% 60%;
+                padding: 10px;
+                width: 100%;
+                background-color: util.$grid-item-grey;
+                div.grid-item 
+                {
+                    padding: 5px;
+                    min-width: 0;
+                }
+                div.grid-item:nth-child(odd) {font-weight: 600;}
+            }
+            div.entries-btn-container 
+            {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                background-color: util.$grid-item-grey;
+                border-top: 1px solid #b6b6b6;
+            }
+        }
+
+        // table (for large+ viewports)
+        table#transactions-tb
+        {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            tr th, tr td {@include util.tbRowWidths(); border: 1px solid black;}
+            tr 
+            {
+                th 
+                {
+                    padding: 10px;
+                    text-align: left;
+                    background-color: #3a0024;
+                    color: white;
+                    @include util.respond(lg) { &:last-child {text-align: center;} }
+                }
+            }
+            tr 
+            {
+                td 
+                {
+                    padding: 5px;
+                    text-align: left; 
+                    background-color: util.$grid-item-grey;
+                    @include util.respond(lg) { &:last-child {text-align: center;} }
+                }
+            }
+        }
+    }
+}

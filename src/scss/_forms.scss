@@ -1,0 +1,72 @@
+@use './_utilities' as util;
+
+@mixin loadStyle()
+{
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    div#form-navbar
+    {
+        button
+        {
+            background-color: util.$theme-color;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            width: 100%;
+            padding: 8px;
+            &:hover,
+            &:focus {background-color: #430046; transition: util.$transition-theme;}
+            &.active {background-color: #000533; color: white;}
+        }
+    }
+    div#form-container
+    {
+        flex: 1;
+        background-color: transparent;
+        h3 {@include util.h3();}
+        h3#add-heading {color: #00c200;}
+        h3#search-heading {color: gold;}
+        
+        form#form-add, form#form-search
+        {
+            background-color: white;
+            padding: 10px 20px;
+            label {font-weight: 600;}
+            input#date-add, input#date-search {font-family: Arial;}
+            input, select
+            {
+                padding: 5px;
+                margin: 5px 0;
+                width: 100%;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: #f1f1f1;
+            }
+            button 
+            {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            button#add-button 
+            {
+                color: white;
+                @include util.gradient(mint); 
+                &:hover, &:focus {@include util.gradientEffect(mint);}
+            }
+            button#search-button 
+            {
+                color: white;
+                @include util.gradient(sunset); 
+                &:hover, &:focus {@include util.gradientEffect(sunset);}
+            }
+        }
+    }
+}
