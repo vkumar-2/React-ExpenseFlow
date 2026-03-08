@@ -12,7 +12,8 @@
     div#summary-container
     {
         background-color: white;
-        padding: 20px;
+        padding: 10px;
+        @include util.respond(lg) {padding: 20px;}
 
         div
         {

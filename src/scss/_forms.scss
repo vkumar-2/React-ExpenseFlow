@@ -34,9 +34,11 @@
         form#form-add, form#form-search
         {
             background-color: white;
-            padding: 10px 20px;
             label {font-weight: 600;}
             input#date-add, input#date-search {font-family: Arial;}
+            padding: 10px;
+            @include util.respond(lg) {padding: 10px 20px;}
+            
             input, select
             {
                 padding: 5px;

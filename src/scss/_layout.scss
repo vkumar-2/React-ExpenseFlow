@@ -35,7 +35,11 @@ body
             }
             main 
             {
-                @include util.gradientAnimation(clouds);
+                background-image: url('../assets/background.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
                 width: 100%; 
                 flex: 1; 
             }

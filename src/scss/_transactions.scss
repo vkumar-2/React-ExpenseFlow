@@ -12,14 +12,17 @@
     div#transactions-container
     {
         background-color: white;
-        padding: 10px 20px;
+        padding: 20px;
+        @include util.respond(lg) {padding: 10px 20px;}
         
         // default container
         section.tr-map-container
         {
             border: 1px solid #b6b6b6;
-            margin: 20px 0;
-
+            margin: 0 0 20px 0;
+            @include util.respond(lg) {margin: 0;}
+            &:last-child {margin-bottom: 0;}
+            
             div.entries
             {
                 display: grid;
@@ -57,7 +60,7 @@
                 {
                     padding: 10px;
                     text-align: left;
-                    background-color: #3a0024;
+                    background-color: util.$array-heading-color;
                     color: white;
                     @include util.respond(lg) { &:last-child {text-align: center;} }
                 }
