@@ -1,4 +1,5 @@
-# React-ExpenseFlow
+<img src="./src/assets/gallery-imgs/banner.png">
+
 ExpenseFlow is a frontend expense tracker app, built with [React](https://react.dev/ "React"), [Sass](https://sass-lang.com/ "Sass") and [Vite](https://vite.dev/ "Vite"). Designed to help users manage income and expenses in a clear and responsive interface. ExpenseFlow provides a structured way to view transactions, monitor balances and interact with forms for accounting and bookkeeping new payments.
 
 ## Setup Instructions
