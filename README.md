@@ -1,16 +1,41 @@
-# React + Vite
+# React-ExpenseFlow
+ExpenseFlow is a frontend expense tracker app, built with [React](https://react.dev/ "React"), [Sass](https://sass-lang.com/ "Sass") and [Vite](https://vite.dev/ "Vite"). Designed to help users manage income and expenses in a clear and responsive interface. ExpenseFlow provides a structured way to view transactions, monitor balances and interact with forms for accounting and bookkeeping new payments.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup Instructions
+Make sure you have **Node.js** already installed for dependency management.
 
-Currently, two official plugins are available:
+#### 1. Clone the Repository:
+Select your desired file directory, then enter the following commands in terminal:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+git clone https://github.com/vkumar-2/React-ExpenseFlow.git
+npm install
+npm run dev
+```
+Note: `npm install` will install dependencies and only needs to be performed for first time installation.
 
-## React Compiler
+#### 2. Access localhost URL:
+After running `npm run dev`, Vite will output your local development URL in the terminal (e.g. http://localhost:5173 ). Enter the provided localhost link into your web browsers address bar.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Frameworks
 
-## Expanding the ESLint configuration
+- **React** - powers the frontend of this expense tracker, allowing the interface to split into reusable components and make it easier to manage state and user interactions.
+- **Sass** - enhanced CSS to enable cleaner styling structure through the use of nesting, mixins and reusable style logic.
+- **Vite** - modern build tool to provide fast development environment with quick startup and hot module replacement.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Images
+| Desktop 1 |
+| ------------ |
+| ![](./src/assets/gallery-imgs/desktop1.png) |
+
+| Desktop 2 |
+| ------------ |
+| ![](./src/assets/gallery-imgs/desktop2.png) |
+
+| Tablet 1 | Tablet 2 |
+| ------------ | ------------ |
+| ![](./src/assets/gallery-imgs/tablet1.png) | ![](./src/assets/gallery-imgs/tablet2.png) |
+
+| Tablet 3 | Tablet 4 |
+| ------------ | ------------ |
+| ![](./src/assets/gallery-imgs/tablet3.png) | ![](./src/assets/gallery-imgs/tablet4.png) |
