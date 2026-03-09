@@ -1,4 +1,4 @@
-<img src="./src/assets/gallery-imgs/banner.png" height="150" width="1000"> <!-- comment -->
+<img src="./src/assets/gallery-imgs/banner.png"> <!-- banner height: 150px, width: 1000px -->
 
 ExpenseFlow is a frontend expense tracker app, built with [React](https://react.dev/ "React"), [Sass](https://sass-lang.com/ "Sass") and [Vite](https://vite.dev/ "Vite"). Designed to help users manage income and expenses in a clear and responsive interface. ExpenseFlow provides a structured way to view transactions, monitor balances and interact with forms for accounting and bookkeeping new payments.
 
@@ -16,7 +16,7 @@ npm run dev
 Note: `npm install` will install dependencies and only needs to be performed for first time installation.
 
 #### 2. Access localhost URL:
-After running `npm run dev`, Vite will output your local development URL in the terminal (e.g. http://localhost:5173 ). Enter the provided localhost link into your web browsers address bar.
+After running `npm run dev`, Vite will output your local development URL in the terminal (e.g. http://localhost:5173 ). Enter the provided localhost link into your web browser address bar to begin running the app.
 
 ## Frameworks
 
