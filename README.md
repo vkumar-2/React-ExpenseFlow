@@ -1,6 +1,6 @@
 <img src="./src/assets/gallery-imgs/banner.png"> <!-- banner height: 150px, width: 1000px -->
 
-ExpenseFlow is a frontend expense tracker app, built with [React](https://react.dev/ "React"), [Sass](https://sass-lang.com/ "Sass") and [Vite](https://vite.dev/ "Vite"). Designed to help users manage income and expenses in a clear and responsive interface. ExpenseFlow provides a structured way to view transactions, monitor balances and interact with forms for accounting and bookkeeping new payments.
+ExpenseFlow is a front-end expense tracker app, built with [React](https://react.dev/ "React"), [Sass](https://sass-lang.com/ "Sass") and [Vite](https://vite.dev/ "Vite"). Designed to help users manage income and expenses in a clear and responsive interface. ExpenseFlow provides a structured way to view transactions, monitor balance sheets and interact with forms for accounting and bookkeeping new payments.
 
 ## Setup Instructions
 Make sure you have **Node.js** already installed for dependency management.
@@ -20,7 +20,7 @@ After running `npm run dev`, Vite will output your local development URL in the 
 
 ## Frameworks
 
-- **React** - powers the frontend of this expense tracker, allowing the interface to split into reusable components and make it easier to manage state and user interactions.
+- **React** - JS library that powers frontend of this expense tracker, allowing the interface to split into reusable components and make it easier to manage state and user interactions.
 - **Sass** - enhanced CSS to enable cleaner styling structure through the use of nesting, mixins and reusable style logic.
 - **Vite** - modern build tool to provide fast development environment with quick startup and hot module replacement.
 
