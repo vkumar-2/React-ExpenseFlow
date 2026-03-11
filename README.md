@@ -21,7 +21,7 @@ After running `npm run dev`, Vite will output your local development URL in the 
 ## Frameworks
 
 - **React** - JS library that powers frontend of this expense tracker, allowing the interface to split into reusable components and make it easier to manage state and user interactions.
-- **Sass** - enhanced CSS to enable cleaner styling structure through the use of nesting, mixins and reusable style logic.
+- **Sass** - enhanced CSS to enable cleaner styling structure through the use of nesting, variables, mixins and reusable style logic.
 - **Vite** - modern build tool to provide fast development environment with quick startup and hot module replacement.
 
 ## Images
